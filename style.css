@@ -5,6 +5,7 @@
 
 body {
     background-color: red;
+    overflow: hidden;
 }
 
 .gamecontainer {
@@ -32,20 +33,49 @@ body {
     background-size: cover;
     position: absolute;
     bottom: 0px;
-    left: 416px;
+    left: 44vw;
 }
 .animateDino{
     animation: dino 0.6s linear;
 
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+.gameover{
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+    visibility: hidden;
+}
+#scorecont{
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 104px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }
 @keyframes dino{
     0%{
         bottom: 0;
     }
     50%{
-        bottom: 500px;
+        bottom: 70vh;
     }
     100%{
         bottom: 0;
+    }
+}
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
     }
 }
